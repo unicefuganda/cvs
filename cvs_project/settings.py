@@ -53,8 +53,7 @@ DATABASES = {
         'USER': 'www-data',
     }
 }
-#DEFAULT_RESPONSE = "This is uReport, Uganda's free SMS system for finding out about life in your community. A new poll is coming soon, so stay tuned. Thanks for being a uReporter!"
-#PING_NUMBER = "256785756424"
+
 # the rapidsms backend configuration is designed to resemble django's
 # database configuration, as a nested dict of (name, configuration).
 #
@@ -66,21 +65,9 @@ DATABASES = {
 # to configure it. see the documentation in those modules for a list of
 # the valid options for each.
 INSTALLED_BACKENDS = {
-    #"att": {
-    #    "ENGINE": "rapidsms.backends.gsm",
-    #    "PORT": "/dev/ttyUSB0"
-    #},
-    #"verizon": {
-    #    "ENGINE": "rapidsms.backends.gsm,
-    #    "PORT": "/dev/ttyUSB1"
-    #},
     "message_tester": {
         "ENGINE": "rapidsms.backends.bucket",
     },
-#    "http" : {"ENGINE":  "rapidsms_backendmanager.backends.http", 
-#                "gateway_url": "http://www.smsgateway.com",
-#                "params_outgoing": "user=my_username&password=my_password&id=%(phone_number)s&text=%(message)s",
-#    }    
 }
 
 
@@ -96,6 +83,7 @@ INSTALLED_APPS = [
     "mptt",
     "uni_form",
     "django_extensions",
+
     # common dependencies (which don't clutter up the ui).
     "rapidsms.contrib.handlers",
     "django.contrib.sites",
@@ -201,7 +189,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.cache.CacheMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'tracking.middleware.UserTrackingMiddleware'
+#    'tracking.middleware.UserTrackingMiddleware'
 )
 
 # -------------------------------------------------------------------- #
@@ -236,9 +224,7 @@ ROOT_URLCONF = "urls"
 # virtual database for each thread, and syncdb is only called for the
 # first. this leads to confusing "no such table" errors. We create
 # a named temporary instance instead.
-import os
 import tempfile
-import sys
 
 try:
     if os.environ.has_key('LOCAL_SETTINGS'):

@@ -4,9 +4,6 @@
 [submodule "cvs_project/rapidsms_healthmodels"]
 	path = cvs_project/rapidsms_healthmodels
 	url = git://github.com/unicefuganda/rapidsms-healthmodels.git
-[submodule "cvs_project/uganda_common"]
-	path = cvs_project/uganda_common
-	url = git://github.com/unicefuganda/rapidsms-uganda-common
 [submodule "cvs_project/django_eav"]
 	path = cvs_project/django_eav
 	url = git://github.com/unicefuganda/django-eav.git
@@ -46,3 +43,6 @@
 [submodule "cvs_project/rapidsms_authsites"]
 	path = cvs_project/rapidsms_authsites
 	url = git://github.com/unicefuganda/rapidsms-authsites
+[submodule "cvs_project/rapidsms_uganda_common"]
+	path = cvs_project/rapidsms_uganda_common
+	url = git://github.com/unicefuganda/rapidsms-uganda-common

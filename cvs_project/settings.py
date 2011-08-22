@@ -49,8 +49,8 @@ CATEGORY_COLORS = ['#AA4643', '#4572A7', '#89A54E', '#80699B', '#3D96AE', '#DB84
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rapidsms',
-        'USER': 'www-data',
+        'NAME': 'devug',
+        'USER': 'asseym',
     }
 }
 
@@ -238,7 +238,8 @@ except ImportError:
 
 if 'test' in sys.argv:
     for db_name in DATABASES:
-        DATABASES[db_name]['TEST_NAME'] = os.path.join(
+        DATABASES[db_name]['ENGINE'] = 'django.db.backends.sqlite3'
+        DATABASES[db_name]['NAME'] = os.path.join(
             tempfile.gettempdir(),
             "%s.rapidsms.test.sqlite3" % db_name)
 

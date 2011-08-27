@@ -1,8 +1,6 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
 from django.contrib import admin
-#from rapidsms_xforms.urls import urlpatterns as xforms_urls
-#from rapidsms_backendmanager.urls import urlpatterns as backendmgr_urls
 from rapidsms_httprouter.urls import urlpatterns as router_urls
 from ureport.urls import urlpatterns as ureport_urls
 from rapidsms_xforms.urls import urlpatterns as xform_urls
@@ -13,12 +11,6 @@ from tracking.urls import urlpatterns as tracking_urls
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Example:
-    # (r'^my-project/', include('my_project.foo.urls')),
-
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
     (r'^admin/', include(admin.site.urls)),
     
     # RapidSMS core URLs
@@ -26,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^$', 'cvs.views.basic.index', name='rapidsms-dashboard'),    
     url('^accounts/login', 'rapidsms.views.login'),
     url('^accounts/logout', 'rapidsms.views.logout'),
+
     # RapidSMS contrib app URLs
     (r'^ajax/', include('rapidsms.contrib.ajax.urls')),
     (r'^export/', include('rapidsms.contrib.export.urls')),
@@ -35,7 +28,6 @@ urlpatterns = patterns('',
     (r'^messaging/', include('rapidsms.contrib.messaging.urls')),
     (r'^registration/', include('auth.urls')),
     (r'^scheduler/', include('rapidsms.contrib.scheduler.urls')),
-    #(r'^status160/', include('status160.urls')),
     (r'^polls/', include('poll.urls')),
 ) + router_urls + ureport_urls + xform_urls + cvs_urls + healthmodels_urls + contact_urls + tracking_urls
 

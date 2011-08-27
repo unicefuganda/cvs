@@ -9,3 +9,11 @@ Community Vulnerability Surveillance (CVS) is a RapidSMS application built on th
 
 In addition to the message processing logic, CVS provides a set of reports and visualizations onto this data.  A running example of cvs can be viewed at cvs.rapidsms.org
 
+CVS Karamoja
+============
+With the roll-out to Karamoja, two additional reports were added to the CVS system:
+
+ - Community-level aggregate reporting
+ - Health Facility-leve stock and treatment reports
+
+Additionally, feedback reports and alerts have been incorporated.

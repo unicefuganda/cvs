@@ -49,7 +49,7 @@ CATEGORY_COLORS = ['#AA4643', '#4572A7', '#89A54E', '#80699B', '#3D96AE', '#DB84
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'rapidsms-test',
+        'NAME': 'cvs',
         'USER': 'postgres',
         'HOST': 'dbserver',
     }

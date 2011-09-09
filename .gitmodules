@@ -40,9 +40,6 @@
 [submodule "cvs_project/rapidsms_tracking"]
 	path = cvs_project/rapidsms_tracking
 	url = git://github.com/unicefuganda/rapidsms-tracking
-[submodule "cvs_project/rapidsms_authsites"]
-	path = cvs_project/rapidsms_authsites
-	url = git://github.com/unicefuganda/rapidsms-authsites
 [submodule "cvs_project/rapidsms_uganda_common"]
 	path = cvs_project/rapidsms_uganda_common
 	url = git://github.com/unicefuganda/rapidsms-uganda-common

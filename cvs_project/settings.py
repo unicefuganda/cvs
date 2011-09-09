@@ -7,12 +7,11 @@
 #                          PATH CONFIGURATION                          #
 # -------------------------------------------------------------------- #
 
-import sys,os
+import sys, os
 filedir = os.path.dirname(__file__)
 sys.path.append(os.path.join(filedir))
 sys.path.append(os.path.join(filedir, 'rapidsms', 'lib'))
 sys.path.append(os.path.join(filedir, 'rapidsms_auth'))
-sys.path.append(os.path.join(filedir, 'rapidsms_authsites'))
 sys.path.append(os.path.join(filedir, 'rapidsms_contact'))
 sys.path.append(os.path.join(filedir, 'rapidsms_cvs'))
 sys.path.append(os.path.join(filedir, 'rapidsms_generic'))
@@ -99,7 +98,6 @@ INSTALLED_APPS = [
     "rapidsms.contrib.locations",
     "rapidsms.contrib.locations.nested",
     "eav",
-    "authsites",
     "healthmodels",
     "rapidsms_xforms",
     "auth",

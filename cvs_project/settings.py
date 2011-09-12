@@ -160,7 +160,7 @@ ADMIN_MEDIA_PREFIX = "/static/media/"
 # this is required for the django.contrib.sites tests to run, but also
 # not included in global_settings.py, and is almost always ``1``.
 # see: http://docs.djangoproject.com/en/dev/ref/contrib/sites/
-SITE_ID = 4
+SITE_ID = 1 
 
 
 # the default log settings are very noisy.

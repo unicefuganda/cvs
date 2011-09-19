@@ -25,6 +25,7 @@ sys.path.append(os.path.join(filedir, 'rapidsms_healthmodels'))
 sys.path.append(os.path.join(filedir, 'rapidsms_tracking'))
 sys.path.append(os.path.join(filedir, 'django_eav'))
 sys.path.append(os.path.join(filedir, 'rapidsms_uganda_common'))
+sys.path.append(os.path.join(filedir, 'rapidsms_uganda_ussd'))
 sys.path.append(os.path.join(filedir, 'rapidsms_unregister'))
 
 # -------------------------------------------------------------------- #
@@ -108,6 +109,7 @@ INSTALLED_APPS = [
     "generic",
     "contact",
     "unregister",
+    "ussd",
     "tracking",
     "script",
 ]
@@ -160,7 +162,7 @@ ADMIN_MEDIA_PREFIX = "/static/media/"
 # this is required for the django.contrib.sites tests to run, but also
 # not included in global_settings.py, and is almost always ``1``.
 # see: http://docs.djangoproject.com/en/dev/ref/contrib/sites/
-SITE_ID = 1 
+SITE_ID = 1
 
 
 # the default log settings are very noisy.

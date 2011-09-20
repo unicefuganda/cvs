@@ -43,3 +43,6 @@
 [submodule "cvs_project/rapidsms_uganda_common"]
 	path = cvs_project/rapidsms_uganda_common
 	url = git://github.com/unicefuganda/rapidsms-uganda-common
+[submodule "cvs_project/rapidsms_uganda_ussd"]
+	path = cvs_project/rapidsms_uganda_ussd
+	url = git://github.com/unicefuganda/rapidsms-uganda-ussd

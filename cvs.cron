@@ -1,0 +1,1 @@
+0 12 1 * * /var/www/env/prod/bin/python /var/www/prod/cvs/cvs_project/manage.py send_monthly_reports

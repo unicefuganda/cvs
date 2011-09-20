@@ -8,14 +8,15 @@ from cvs.urls import urlpatterns as cvs_urls
 from healthmodels.urls import urlpatterns as healthmodels_urls
 from contact.urls import urlpatterns as contact_urls
 from tracking.urls import urlpatterns as tracking_urls
+from ussd.urls import urlpatterns as ussd_urls
 admin.autodiscover()
 
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
-    
+
     # RapidSMS core URLs
     (r'^account/', include('rapidsms.urls.login_logout')),
-    url(r'^$', 'cvs.views.basic.index', name='rapidsms-dashboard'),    
+    url(r'^$', 'cvs.views.basic.index', name='rapidsms-dashboard'),
     url('^accounts/login', 'rapidsms.views.login'),
     url('^accounts/logout', 'rapidsms.views.logout'),
 
@@ -29,7 +30,7 @@ urlpatterns = patterns('',
     (r'^registration/', include('auth.urls')),
     (r'^scheduler/', include('rapidsms.contrib.scheduler.urls')),
     (r'^polls/', include('poll.urls')),
-) + router_urls + ureport_urls + xform_urls + cvs_urls + healthmodels_urls + contact_urls + tracking_urls
+) + router_urls + ureport_urls + xform_urls + cvs_urls + healthmodels_urls + contact_urls + tracking_urls + ussd_urls
 
 if settings.DEBUG:
     urlpatterns += patterns('',
@@ -40,5 +41,5 @@ if settings.DEBUG:
     )
 
 from rapidsms_httprouter.router import get_router
-get_router()
+get_router(start_workers=True)
 

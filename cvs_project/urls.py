@@ -40,6 +40,8 @@ if settings.DEBUG:
         (r'^', include('rapidsms.urls.static_media')),
     )
 
-from rapidsms_httprouter.router import get_router
-get_router(start_workers=True)
+import sys
+if not 'test' in sys.argv:
+    from rapidsms_httprouter.router import get_router
+    get_router(start_workers=True)
 

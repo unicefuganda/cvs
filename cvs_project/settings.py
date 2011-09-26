@@ -78,6 +78,7 @@ INSTALLED_APPS = [
 
     # the essentials.
     "django_nose",
+    "django_digest",
     "djtables",
     "uganda_common",
     "rapidsms",

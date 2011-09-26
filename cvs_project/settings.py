@@ -32,7 +32,7 @@ sys.path.append(os.path.join(filedir, 'rapidsms_unregister'))
 #                          MAIN CONFIGURATION                          #
 # -------------------------------------------------------------------- #
 TIME_ZONE = "Africa/Kampala"
-ACTIVATION_CODE = '09101962'
+ACTIVATION_CODE = 'start'
 OPT_IN_WORDS = ['join']
 OPT_OUT_WORDS = ['quit']
 OPT_OUT_MESSAGE = 'You have just quit.If you want to re-register,or register to a new location,please send the word JOIN to 6767.'
@@ -79,8 +79,8 @@ INSTALLED_APPS = [
     # the essentials.
     "django_nose",
     "djtables",
-    "rapidsms",
     "uganda_common",
+    "rapidsms",
     "mptt",
     "uni_form",
     "django_extensions",
@@ -130,6 +130,10 @@ RAPIDSMS_TABS = [
     ("cvs-map", "Map"),
     ("cvs-contact", "VHTs"),
     ("cvs-messagelog", "Message Log"),
+]
+
+AUTHENTICATED_TABS = [
+    ("polls", "Polls")
 ]
 
 
@@ -182,6 +186,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     "django.core.context_processors.media",
     "django.core.context_processors.request",
     "generic.context_processors.map_params",
+    "uganda_common.context_processors.authtabs",
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -190,7 +195,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.cache.CacheMiddleware',
     'django.middleware.common.CommonMiddleware',
-#    'tracking.middleware.UserTrackingMiddleware'
 )
 
 # -------------------------------------------------------------------- #

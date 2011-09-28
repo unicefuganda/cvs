@@ -37,9 +37,6 @@
 [submodule "cvs_project/rapidsms_xforms_src"]
 	path = cvs_project/rapidsms_xforms_src
 	url = git://github.com/unicefuganda/rapidsms-xforms.git
-[submodule "cvs_project/rapidsms_tracking"]
-	path = cvs_project/rapidsms_tracking
-	url = git://github.com/unicefuganda/rapidsms-tracking
 [submodule "cvs_project/rapidsms_uganda_common"]
 	path = cvs_project/rapidsms_uganda_common
 	url = git://github.com/unicefuganda/rapidsms-uganda-common

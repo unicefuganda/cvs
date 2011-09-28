@@ -7,7 +7,6 @@ from rapidsms_xforms.urls import urlpatterns as xform_urls
 from cvs.urls import urlpatterns as cvs_urls
 from healthmodels.urls import urlpatterns as healthmodels_urls
 from contact.urls import urlpatterns as contact_urls
-from tracking.urls import urlpatterns as tracking_urls
 from ussd.urls import urlpatterns as ussd_urls
 admin.autodiscover()
 
@@ -30,7 +29,7 @@ urlpatterns = patterns('',
     (r'^registration/', include('auth.urls')),
     (r'^scheduler/', include('rapidsms.contrib.scheduler.urls')),
     (r'^polls/', include('poll.urls')),
-) + router_urls + ureport_urls + xform_urls + cvs_urls + healthmodels_urls + contact_urls + tracking_urls + ussd_urls
+) + router_urls + ureport_urls + xform_urls + cvs_urls + healthmodels_urls + contact_urls + ussd_urls
 
 if settings.DEBUG:
     urlpatterns += patterns('',

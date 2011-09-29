@@ -129,6 +129,8 @@ RAPIDSMS_TABS = [
     ("cvs-map", "Map"),
     ("cvs-contact", "VHTs"),
     ("cvs-messagelog", "Message Log"),
+    ("cvs-training-contact", "Trainees"),
+    ("cvs-training-messagelog", "Training Messages"),
 ]
 
 AUTHENTICATED_TABS = [

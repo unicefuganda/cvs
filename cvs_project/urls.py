@@ -8,6 +8,7 @@ from cvs.urls import urlpatterns as cvs_urls
 from healthmodels.urls import urlpatterns as healthmodels_urls
 from contact.urls import urlpatterns as contact_urls
 from ussd.urls import urlpatterns as ussd_urls
+from django.views.generic.simple import direct_to_template
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -15,7 +16,7 @@ urlpatterns = patterns('',
 
     # RapidSMS core URLs
     (r'^account/', include('rapidsms.urls.login_logout')),
-    url(r'^$', 'cvs.views.basic.index', name='rapidsms-dashboard'),
+    url(r'^$', direct_to_template, {'template':'mtrack/dashboard.html'}, name='rapidsms-dashboard'),
     url('^accounts/login', 'rapidsms.views.login'),
     url('^accounts/logout', 'rapidsms.views.logout'),
 
